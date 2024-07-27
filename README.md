@@ -1,2 +1,0 @@
-# blossom-ecomerce
-Blossom
