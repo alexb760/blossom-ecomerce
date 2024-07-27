@@ -10,4 +10,8 @@ echo "Create gateway image..."
 ./gateway-image-builder.sh
 echo "Create Order image..."
 ./oreder-service-image-builder.sh
+echo "Create Product image..."
+./product-service-image-builder.sh
+echo "Create user image..."
+./product-service-image-builder.sh
 cd ..

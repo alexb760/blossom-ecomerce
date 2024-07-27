@@ -33,6 +33,26 @@ services:
     networks:
       - microservices
 
+  product-service:
+    image: alexb-io/product-service:latest
+    container_name: product-service
+    ports:
+      - "8061:8061"
+    environment:
+      - EUREKA_SERVER_URI=http://eureka-server:8761/eureka
+    networks:
+      - microservices
+
+  user-service:
+    image: alexb-io/user-service:latest
+    container_name: user-service
+    ports:
+      - "8062:8062"
+    environment:
+      - EUREKA_SERVER_URI=http://eureka-server:8761/eureka
+    networks:
+      - microservices
+
 #  db:
 #    image: mysql:5.7
 #    environment:
