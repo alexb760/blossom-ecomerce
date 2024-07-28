@@ -2,7 +2,7 @@ server:
   port: 8061
 spring:
   application:
-    name=product
+    name: product
 
   datasource:
     url: jdbc:mysql://localhost:3306/ecommerce_db
@@ -19,13 +19,13 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
 
   liquibase:
-    change-log: classpath:db/changelog/product.master.yaml
+    change-log: classpath:db/changelog/db.changelog-master.yaml
 
 eureka:
   client:
-  service-url:
-    defaultZone=http://eureka-server:8761/eureka
-  instace:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+  instance:
     prefer-ip-address: true
 #eureka.instance.ip-address=localhost
 #eureka.instance.hostname=localhost

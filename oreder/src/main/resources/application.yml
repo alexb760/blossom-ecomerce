@@ -2,7 +2,7 @@ server:
   port: 8060
 spring:
   application:
-    name=order
+    name: order
 
   datasource:
     url: jdbc:mysql://localhost:3306/ecommerce_db
@@ -23,11 +23,10 @@ spring:
 
 eureka:
   client:
-  service-url:
-    defaultZone=http://eureka-server:8761/eureka
-  instace:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+  instance:
     prefer-ip-address: true
-
 
 
 #eureka.instance.ip-address=localhost

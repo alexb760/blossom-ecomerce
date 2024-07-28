@@ -13,5 +13,5 @@ echo "Create Order image..."
 echo "Create Product image..."
 ./product-service-image-builder.sh
 echo "Create user image..."
-./product-service-image-builder.sh
+./user-service-image-builder.sh
 cd ..

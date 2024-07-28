@@ -1,0 +1,1 @@
+ docker run --name db-container -e MYSQL_ROOT_PASSWORD=ecommerce_db -e MYSQL_DATABASE=ecommerce_db -p 3306:3306  mysql:5.7

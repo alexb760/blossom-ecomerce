@@ -7,7 +7,15 @@ spring:
         - id: order
           uri: lb://order
           predicates:
-            - Path=/rest/api/order/**
+            - Path=/api/orders/**
+        - id: user
+          uri: lb://user
+          predicates:
+            - Path=/api/users/**
+        - id: product
+          uri: lb://product
+          predicates:
+            - Path=/api/products/**
 eureka:
   client:
     service-url:
