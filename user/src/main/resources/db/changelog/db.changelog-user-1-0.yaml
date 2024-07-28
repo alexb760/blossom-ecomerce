@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
       id: 1
-      author: Orders
+      author: User
       changes:
         - createTable:
-            tableName: orders
+            tableName: user
             columns:
               - column:
                   name: id
@@ -14,17 +14,12 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: product
+                  name: username
                   type: VARCHAR(255)
                   constraints:
                     nullable: false
               - column:
-                  name: quantity
-                  type: INT
-                  constraints:
-                    nullable: false
-              - column:
-                  name: price
-                  type: DOUBLE
+                  name: email
+                  type: VARCHAR(255)
                   constraints:
                     nullable: false
