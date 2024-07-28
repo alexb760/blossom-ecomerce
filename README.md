@@ -64,6 +64,8 @@ docker-compose up --scale order-service=2 --scale product-service=2
 
 ## Check and play
 * Interface should run in localhost:8080/api/
+Only available in Order service.
+* http://localhost:8080/swagger-ui.html
 
 ## Future actions:
 * Load Balancer: Comes handy when we set up many instances of our services
