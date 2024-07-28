@@ -3,7 +3,9 @@ package com.example.ecomerce.oreder.domain;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -20,5 +22,14 @@ public class Order {
     private User user;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<OrderProduct> orderProducts = new HashSet<>();
+    private List<OrderProduct> orderProducts = new ArrayList<>();
+
+
+//    public void addProduct(List<Product> products) {
+//        for (Product product : products) {
+//            OrderProduct orderProduct = new OrderProduct(this, product);
+//            orderProducts.add(orderProduct);
+////            product.getOrderProducts().add(orderProduct);
+//        }
+//    }
 }

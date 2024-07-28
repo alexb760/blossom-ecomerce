@@ -1,10 +1,15 @@
 package com.example.ecomerce.oreder.domain;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
+@Data
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,5 +19,5 @@ public class Product {
     private Double price;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<OrderProduct> orderProducts = new HashSet<>();
+    private List<OrderProduct> orderProducts = new ArrayList<>();
 }
