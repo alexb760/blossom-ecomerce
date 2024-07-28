@@ -19,4 +19,8 @@ public class OrderProduct implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("productId")
     private Product product;
+
+
+    private Integer quantity;
+    private Double price;
 }

@@ -36,6 +36,19 @@ databaseChangeLog:
                   type: BIGINT
                   constraints:
                     nullable: false
+              - column:
+                  name: quantity
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: DOUBLE
+                  constraints:
+                    nullable: false
+        - addPrimaryKey:
+            tableName: order_product
+            columnNames: order_id, product_id
         - addForeignKeyConstraint:
             baseTableName: orders
             baseColumnNames: user_id

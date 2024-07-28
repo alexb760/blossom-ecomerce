@@ -1,7 +1,6 @@
 package com.example.ecomerce.oreder.domain;
 
 import jakarta.persistence.*;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,6 +13,6 @@ public class Product {
     private String description;
     private Double price;
 
-    @ManyToMany(mappedBy = "products")
-    private Set<Order> orders = new HashSet<>();
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<OrderProduct> orderProducts = new HashSet<>();
 }
